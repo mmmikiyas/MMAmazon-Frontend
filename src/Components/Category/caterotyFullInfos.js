@@ -1,3 +1,5 @@
+import Category from "./caterotyFullInfos";
+
 // data.js
 export const categoryInfos = [
   {
@@ -25,3 +27,4 @@ image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png"
   }
 ];
+

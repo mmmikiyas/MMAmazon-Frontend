@@ -1,5 +1,5 @@
 import React from 'react'
-import {categoryInfos} from './Category.js'
+import {categoryInfos} from './caterotyFullInfos.js'
 import CategoryCard from './CategoryCard'
 import classes from '../Category/category.module.css'
 function Category() {
