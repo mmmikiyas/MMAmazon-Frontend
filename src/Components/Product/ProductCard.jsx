@@ -4,7 +4,7 @@ import CurrentFormat from '../CurrencyFormat/CurrencyFormat'
 import Button from '@mui/material/Button'
 import classes from './Product.module.css'
 import { Link } from 'react-router-dom'
-function ProductCard({product}) {
+function ProductCard({product, flex, renderDesc}) {
     if (!product) return null;
 
   const {
@@ -12,17 +12,19 @@ function ProductCard({product}) {
     title,
     id,
     rating = {},
-    price
+    price,
+    description
   } = product;
   
     // const {image,title,id,rating,price}=product;
   return (
-    <div className={`${classes.card_container}`}>
+    <div className={`${classes.card_container} ${flex?classes.product_flexed: ''}`}>
       <Link to={`/products/${id}`}>
         <img src={image} alt='' className={classes.img_container}/>
       </Link>
       <div>
         <h3>{title}</h3>
+        {renderDesc && <div style={{maxWidth:'750px'}}>{description}</div>}
         <div className={classes.rating}>
             {/* rating */}
             <Rating value={rating.rate ?? 0} precision={0.1 }/>
