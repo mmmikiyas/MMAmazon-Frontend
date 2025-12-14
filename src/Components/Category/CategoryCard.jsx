@@ -6,16 +6,16 @@ function CategoryCard({data}) {
 
   return (
     <div className={classes.category}>
-     <a href="">
+     <Link to={`/category/${data.name}`}>
 <span>
-    <h2>{data.title}</h2>
+    <h2>{data?.title}</h2>
 </span>
     
 
 
 <img src={data?.image} alt="" />
 <p>shop now</p>
- </a>
+ </Link>
       </div>
   )
 }
